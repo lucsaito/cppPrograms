@@ -2,7 +2,7 @@
 // Created by Lucas on 07/10/20.
 //
 
-long int factorial(int n) {
+long long factorial(int n) {
     if (n == 0) {
         return 1;
     } else {

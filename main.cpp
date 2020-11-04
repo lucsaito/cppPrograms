@@ -1,10 +1,14 @@
 #include <iostream>
 #include <string>
 #include <cmath>
+#include "gcd.cpp"
+#include "polygonAreaPer.cpp"
 
 
 using std::cout;using std::endl;using std::cin;
 using std::string;
+
+
 
 // Will return true if the n-th bit is 1, else false
 bool get_bit(const uint64_t x, const uint8_t n){
@@ -22,10 +26,7 @@ void print_bits(const uint64_t x) {
 }
 
 
-
-
 int main() {
-
     const string subject = "Programming";
     uint16_t val = 3;
     string nam = "lucs";
@@ -37,20 +38,10 @@ int main() {
     //int err{3.14};   // Error
     uint64_t t = 10ull;
 
-    int someArray[10]{84, 23, 45, 12, 45,
-                      34, 85, 93, 15, 61};
-    int *poin = &someArray[0];
-    /*
-    for (int i = 0; i < 10; i++) {
-        cout << poin << " has value " << *poin << endl;
-        poin++;
-    }*/
-
-    cout << gcd(75,25) << endl;
-
-
-
-
+    int *a = new int[10]; // Allocates 10 integers on the heap
+    //cout << a << endl;
+    //cout << *a << endl;
+    //int *b = a + 1; // "Shifts" to the right by "n" values of that particular type, "int" is in the example
 
 
     return 0;
@@ -133,4 +124,21 @@ The "0xffffUL", an unsigned long, would be converted to a long, resulting in a p
  *
  * int *a = new int(5);  // "We ask our os to give us 4 bytes and initialize with 7"
  * delete a;
+ */
+
+/* # Creates an array of size n on the heap by input
+ * size_t n;
+ * cin >> n;
+ * int *myarr = new int[n];
+ */
+
+/* Pointer to const, ex: const int *b = new int[10];
+ * ++b  // It can modify the pointer itself
+ * *b = 123; // It can't modify the value it points to
+ *
+ * Const pointer, ex: int * const c = new int[10];
+ * ++c  // The pointer cannot be changed
+ * *c += 12;  // The value can be modified
+ *
+ * Const pointer to const value, ex const int *const d = new int[43];
  */
